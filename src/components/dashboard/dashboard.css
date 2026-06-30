@@ -1,0 +1,392 @@
+
+.star-btn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:32px;
+
+height:32px;
+
+border-radius:6px;
+
+color:#57606a;
+
+transition:.18s;
+
+flex-shrink:0;
+
+}
+
+.star-btn:hover{
+
+background:#f6f8fa;
+
+color:#f4b400;
+
+}
+
+
+
+
+
+.dashboard-hero{
+
+max-width:1280px;
+
+margin:28px auto 24px;
+margin-bottom:32px;
+
+padding:28px 36px;
+
+background:#f6f8fa;
+
+border:1px solid #d8dee4;
+
+border-radius:8px;
+
+}
+
+.dashboard-hero h1{
+
+margin:0;
+
+font-size:34px;
+
+color:#24292f;
+
+}
+
+.dashboard-hero p{
+
+margin-top:10px;
+
+font-size:16px;
+
+color:#57606a;
+
+}
+
+
+.repo-card{
+
+background:white;
+
+border:1px solid #e5e7eb;
+
+border-radius:6px;
+
+padding:18px 20px;
+
+margin-bottom:14px;
+
+transition:.18s;
+
+cursor:pointer;
+
+}
+.repo-card:hover{
+
+border-color:#d0d7de;
+
+background:#fafbfc;
+
+
+}
+.star-btn{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:36px;
+
+height:36px;
+
+border-radius:50%;
+
+transition:.2s;
+
+}
+
+.star-btn:hover{
+
+background:#f6f8fa;
+
+}
+
+
+
+#dashboard{
+
+max-width:1280px;
+
+margin:auto;
+
+padding:0 32px 40px;
+
+display:grid;
+
+grid-template-columns:300px 1fr 280px;
+
+gap:28px;
+
+}
+
+#dashboard aside{
+
+background:#fff;
+
+border:1px solid  #e5e7eb;
+
+border-radius:6px;
+
+padding:20px;
+
+height:fit-content;
+
+position:sticky;
+
+top:84px;
+
+}
+
+ #dashboard h3{
+
+margin:0 0 18px;
+
+font-size:18px;
+
+font-weight:600;
+
+color:#24292f;
+
+}
+
+#dashboard h4{
+
+margin:0 0 10px;
+
+font-size:18px;
+
+font-weight:600;
+color:#0969da;
+
+
+}
+
+#dashboard p{
+
+color:#24292f;
+
+}
+#dashboard ul{
+
+padding-left:18px;
+
+margin:0;
+
+}
+
+#dashboard li{
+
+margin-bottom:10px;
+
+color:#57606a;
+
+}
+
+ #search{
+
+margin-bottom:20px;
+
+}
+
+#search input{
+
+background:#ffffff;
+
+border:1px solid #d0d7de;
+
+border-radius:6px;
+
+padding:10px 14px;
+
+font-size:14px;
+
+transition:.18s;
+width:100%;
+
+box-sizing:border-box;
+
+}
+#search input:focus{
+
+border-color:#0969da;
+
+box-shadow:0 0 0 3px rgba(9,105,218,.15);
+
+}
+
+
+.repo-card p{
+
+display:-webkit-box;
+
+-webkit-line-clamp:3;
+
+-webkit-box-orient:vertical;
+
+overflow:hidden;
+
+}
+
+
+#dashboard aside h3{
+
+padding-bottom:12px;
+
+border-bottom:1px solid #e5e7eb;
+
+margin-bottom:16px;
+
+}
+
+.repo-card-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-start;
+
+gap:12px;
+
+margin-bottom:10px;
+    width:100%;
+
+}
+
+.repo-card-header h4{
+
+margin:0;
+
+color:#0969da;
+overflow:hidden;
+font-size:20px;
+  text-overflow:ellipsis;
+    white-space:nowrap;
+font-weight:600;
+ flex:1;          /* ⭐ important */
+    min-width:0;     /* ⭐ important */
+       word-break:break-word;
+         min-width:0;
+
+}
+
+/* responsiveness */
+
+/* Tablet (1024px) */
+@media (max-width:1024px){
+
+#dashboard{
+
+    grid-template-columns:1fr;
+    gap:24px;
+
+}
+
+#dashboard aside{
+
+    position:static;
+
+}
+
+.dashboard-hero{
+
+    margin:24px;
+    padding:24px;
+
+}
+
+}
+
+
+/* mobile (768px) */
+@media (max-width:768px){
+
+#dashboard{
+
+    padding:0 16px 24px;
+
+}
+
+.dashboard-hero{
+
+    margin:16px;
+    padding:20px;
+
+}
+
+.dashboard-hero h1{
+
+    font-size:26px;
+
+}
+
+.dashboard-hero p{
+
+    font-size:14px;
+
+}
+
+.repo-card{
+
+    padding:16px;
+
+}
+
+#dashboard h3{
+
+    font-size:17px;
+
+}
+
+}
+
+/* Small Mobile (480px) */
+
+@media (max-width:480px){
+
+.dashboard-hero{
+
+    padding:18px;
+
+}
+
+.dashboard-hero h1{
+
+    font-size:22px;
+
+}
+
+.repo-card-header h4{
+
+    font-size:17px;
+
+}
+
+#search input{
+
+    font-size:13px;
+
+    padding:9px 12px;
+
+}
+
+}

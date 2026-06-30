@@ -1,0 +1,213 @@
+.edit-repo-page{
+    /* background:;  #f6f8fa */
+  background:#f6f8fa;
+    min-height:100vh;
+    padding:40px;
+}
+
+.edit-repo-card{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    border:1px solid #d0d7de;
+    border-radius:12px;
+    padding:35px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.edit-repo-card h1{
+    margin-top:0;
+    color:#24292f;
+}
+
+.edit-subtitle{
+    color:#656d76;
+    margin-bottom:28px;
+}
+
+.edit-repo-card label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#24292f;
+}
+
+.repo-input,
+.repo-textarea,
+.repo-select{
+    width:100%;
+    padding:12px;
+    border:1px solid #d0d7de;
+    border-radius:8px;
+    font-size:15px;
+    box-sizing:border-box;
+}
+
+.repo-textarea{
+    min-height:140px;
+    resize:vertical;
+}
+
+.repo-input:focus,
+.repo-textarea:focus,
+.repo-select:focus{
+    outline:none;
+    border-color:#0969da;
+    box-shadow:0 0 0 3px rgba(9,105,218,.15);
+}
+
+.save-btn{
+    margin-top:28px;
+    width:100%;
+    background:#2da44e;
+    color:white;
+    border:none;
+    padding:13px;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.save-btn:hover{
+    background:#218739;
+}
+
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width:1024px){
+
+.edit-repo-page{
+
+    padding:28px;
+
+}
+
+.edit-repo-card{
+
+    max-width:100%;
+
+    padding:30px;
+
+}
+
+}
+
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+.edit-repo-page{
+
+    padding:16px;
+
+}
+
+.edit-repo-card{
+
+    width:100%;
+
+    max-width:none;
+
+    padding:22px;
+
+    box-sizing:border-box;
+
+}
+
+.edit-repo-card h1{
+
+    font-size:26px;
+
+}
+
+.edit-subtitle{
+
+    font-size:15px;
+
+    margin-bottom:22px;
+
+}
+
+.edit-repo-card label{
+
+    margin-top:16px;
+
+}
+
+.repo-input,
+.repo-textarea,
+.repo-select{
+
+    font-size:14px;
+
+    padding:10px;
+
+}
+
+.repo-textarea{
+
+    min-height:120px;
+
+}
+
+.save-btn{
+
+    width:100%;
+
+    padding:12px;
+
+}
+
+}
+
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width:480px){
+
+.edit-repo-page{
+
+    padding:12px;
+
+}
+
+.edit-repo-card{
+
+    padding:18px;
+
+    border-radius:8px;
+
+}
+
+.edit-repo-card h1{
+
+    font-size:22px;
+
+}
+
+.edit-subtitle{
+
+    font-size:14px;
+
+}
+
+.repo-input,
+.repo-textarea,
+.repo-select{
+
+    font-size:14px;
+
+}
+
+}
