@@ -23,7 +23,7 @@ const handleSignup=async(e)=>{
 e.preventDefault();
 try{
 setLoading(true);
-const res=await api.post("http://localhost:3002/signup",{
+const res=await api.post("3.106.248.73:3002/signup",{
     email:email,
     password:password,
     username:username,

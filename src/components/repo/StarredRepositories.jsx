@@ -21,13 +21,13 @@ const StarredRepositories = () => {
       const userId = localStorage.getItem("userId");
 
       const userRes = await api.get(
-        `http://localhost:3002/userProfile/${userId}`
+        `3.106.248.73:3002/userProfile/${userId}`
       );
 
       const starredIds = userRes.data.starRepos || [];
 
       const repoPromises = starredIds.map((repoId) =>
-        api.get(`http://localhost:3002/repo/${repoId}`)
+        api.get(`3.106.248.73:3002/repo/${repoId}`)
       );
 
       const repoResponses = await Promise.all(repoPromises);

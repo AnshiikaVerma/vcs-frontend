@@ -33,7 +33,7 @@ const CreateRepository = () => {
     //  const token = localStorage.getItem("token");
 
       const response = await api.post(   //replace  await axios.post with  await api.post
-        "http://localhost:3002/repo/create",
+        "3.106.248.73:3002/repo/create",
         {
           owner,
           name: repoData.name,

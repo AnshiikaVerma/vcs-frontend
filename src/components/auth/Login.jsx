@@ -22,7 +22,7 @@ const Login = () => {
 
     try {
       setLoading(true);
-      const res = await api.post("http://localhost:3002/login", {  ////replace  await axios.post with  await api.post
+      const res = await api.post("3.106.248.73:3002/login", {  ////replace  await axios.post with  await api.post
         email: email,
         password: password,
       });

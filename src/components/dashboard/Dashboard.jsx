@@ -20,10 +20,10 @@ useEffect(()=>{
 const userId=localStorage.getItem("userId");
 const fetchRepositories=async()=>{
     try{   //-----------can use fetch logic instead of using axios------------
-        // const response=await fetch(`http://localhost:3002/repo/user/${userId}`);
+        // const response=await fetch(`3.106.248.73:3002/repo/user/${userId}`);
         // const data= await response.json();
         // setRepositories(data.repositories);
-const res=await api.get(`http://localhost:3002/repo/user/${userId}`);
+const res=await api.get(`3.106.248.73:3002/repo/user/${userId}`);
 setRepositories(res.data.repositories);
     }catch(err){
         console.error("Error while fetching repositories: ",err)
@@ -32,7 +32,7 @@ setRepositories(res.data.repositories);
 };
 const fetchSuggestedRepositories=async()=>{
     try{ 
-const res=await api.get("http://localhost:3002/repo/all");
+const res=await api.get("3.106.248.73:3002/repo/all");
 setSuggestedRepositories(res.data);
 
     }catch(err){
@@ -43,7 +43,7 @@ setSuggestedRepositories(res.data);
 const fetchStarredRepos = async () => {
     try {
         const res = await api.get(
-            `http://localhost:3002/userProfile/${userId}`
+            `3.106.248.73:3002/userProfile/${userId}`
         );
 
         setStarredRepos(res.data.starRepos || []);
@@ -74,7 +74,7 @@ const toggleStar = async (repoId) => {
         const userId = localStorage.getItem("userId");
 
         const res = await api.post(
-            "http://localhost:3002/user/starRepository",
+            "3.106.248.73:3002/user/starRepository",
             {
                 userId,
                 repoId

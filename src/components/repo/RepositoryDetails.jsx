@@ -36,7 +36,7 @@ const [commitFiles, setCommitFiles] = useState({});
     const fetchRepo = async () => {
       try {
         const res = await api.get(
-          `http://localhost:3002/repo/${id}`
+          `3.106.248.73:3002/repo/${id}`
         );
 
         setRepo(res.data);
@@ -45,13 +45,13 @@ const [commitFiles, setCommitFiles] = useState({});
 
            //fetching issues too
           const issueRes = await api.get(
-      `http://localhost:3002/issue/all/${id}`
+      `3.106.248.73:3002/issue/all/${id}`
     );
 
     setIssues(issueRes.data);
 //commit fetching too
 const commitRes = await api.get(
-  `http://localhost:3002/repo/${id}/commits`
+  `3.106.248.73:3002/repo/${id}/commits`
 );
 
 setCommits(commitRes.data);
@@ -68,7 +68,7 @@ setCommits(commitRes.data);
   try {
       // const token = localStorage.getItem("token");
     await api.post(
-      `http://localhost:3002/issue/create/${id}`,
+      `3.106.248.73:3002/issue/create/${id}`,
       {
         title,
         description,
@@ -81,7 +81,7 @@ setCommits(commitRes.data);
     );
 
     const issueRes = await api.get(
-      `http://localhost:3002/issue/all/${id}`
+      `3.106.248.73:3002/issue/all/${id}`
     );
 
     setIssues(issueRes.data);
@@ -108,7 +108,7 @@ const viewFiles = async (commitId) => {
     if (!commitFiles[commitId]) {
 
       const res = await api.get(
-        `http://localhost:3002/repo/${id}/commits/${commitId}/files`
+        `3.106.248.73:3002/repo/${id}/commits/${commitId}/files`
       );
   
 
@@ -141,7 +141,7 @@ const deleteRepository = async () => {
     if (!confirmDelete) return;
 
     await api.delete(
-      `http://localhost:3002/repo/delete/${id}`,
+      `3.106.248.73:3002/repo/delete/${id}`,
   //      {
   //   headers: {
   //     Authorization: `Bearer ${token}`,
@@ -166,7 +166,7 @@ const toggleIssueStatus = async (issue) => {
         : "open";
 
     await api.put(
-      `http://localhost:3002/issue/update/${issue._id}`,
+      `3.106.248.73:3002/issue/update/${issue._id}`,
       {
         title: issue.title,
         description: issue.description,
@@ -180,7 +180,7 @@ const toggleIssueStatus = async (issue) => {
     );
 
     const issueRes = await api.get(
-      `http://localhost:3002/issue/all/${id}`
+      `3.106.248.73:3002/issue/all/${id}`
     );
 
     setIssues(issueRes.data);
@@ -195,7 +195,7 @@ const deleteIssue = async (issueId) => {
   try {
 //  const token = localStorage.getItem("token");
     await api.delete(
-      `http://localhost:3002/issue/delete/${issueId}`,
+      `3.106.248.73:3002/issue/delete/${issueId}`,
   //     {
   //   headers: {
   //     Authorization: `Bearer ${token}`,
@@ -204,7 +204,7 @@ const deleteIssue = async (issueId) => {
     );
 
     const issueRes = await api.get(
-      `http://localhost:3002/issue/all/${id}`
+      `3.106.248.73:3002/issue/all/${id}`
     );
 
     setIssues(issueRes.data);

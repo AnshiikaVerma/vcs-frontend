@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import api from "../../api/axios";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "./editRepository.css";
+import "./EditRepository.css";
 import Navbar from "../Navbar";
 
 
@@ -22,7 +22,7 @@ useEffect(() => {
     try {
 
       const res = await api.get(
-        `http://localhost:3002/repo/${id}`
+        `3.106.248.73:3002/repo/${id}`
       );
 
       setName(res.data.name);
@@ -42,7 +42,7 @@ const updateRepository = async () => {
   try {
 //  const token = localStorage.getItem("token");
     await api.put(
-      `http://localhost:3002/repo/update/${id}`,
+      `3.106.248.73:3002/repo/update/${id}`,
       {
         name,
         description,

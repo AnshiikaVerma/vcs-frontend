@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3002",
+  baseURL: "http://3.106.248.73:3002",
 });
 
 api.interceptors.request.use( //Interceptor matlab Har request ke bhejne se pehle kuch kaam karna.
